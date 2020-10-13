@@ -1,0 +1,20 @@
+name: blog theme
+description: this theme is for clean blogs
+type: theme
+core: 8.x
+base theme: bootstrap4
+
+libraries:
+  - blog/global-styling
+  - blog/fontawesome
+
+regions:
+  header: Header
+  nav_branding: 'Navigation branding region'
+  nav_main: 'Main navigation region'
+  nav_additional: 'Additional navigation region (eg search form, social icons, etc)'
+  breadcrumb: Breadcrumbs
+  content: 'Main content'
+  sidebar_first: 'Sidebar first'
+  sidebar_second: 'Sidebar second'
+  footer: Footer

@@ -1,0 +1,25 @@
+uuid: 61c4e7c6-6f9f-4053-b952-f166a5214a42
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - blog
+_core:
+  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
+id: blog_branding
+theme: blog
+region: header
+weight: -5
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: false
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

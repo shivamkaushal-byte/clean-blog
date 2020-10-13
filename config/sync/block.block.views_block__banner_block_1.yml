@@ -1,0 +1,34 @@
+uuid: 26c6d70c-8cbf-40d2-ba2a-93193c0b978f
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.banner
+  module:
+    - node
+    - views
+  theme:
+    - blog
+id: views_block__banner_block_1
+theme: blog
+region: nav_main
+weight: 0
+provider: null
+plugin: 'views_block:banner-block_1'
+settings:
+  id: 'views_block:banner-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      contact_us: contact_us
+      page: page
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

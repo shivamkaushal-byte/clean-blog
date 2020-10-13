@@ -1,0 +1,30 @@
+uuid: 3068b903-7123-4988-ad31-00e4ab821613
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.clean_blog
+  module:
+    - system
+    - views
+  theme:
+    - blog
+id: views_block__clean_blog_block_1
+theme: blog
+region: content
+weight: 1
+provider: null
+plugin: 'views_block:clean_blog-block_1'
+settings:
+  id: 'views_block:clean_blog-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,33 @@
+uuid: 314eeae2-4f79-4bf4-ac6d-78941ff5f8de
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.postblock
+  module:
+    - node
+    - views
+  theme:
+    - blog
+id: views_block__postblock_block_1
+theme: blog
+region: nav_main
+weight: 0
+provider: null
+plugin: 'views_block:postblock-block_1'
+settings:
+  id: 'views_block:postblock-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      article: article
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

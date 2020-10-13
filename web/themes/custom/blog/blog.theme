@@ -1,0 +1,45 @@
+<?php
+
+function blog_preprocess_page(&$vars) {
+  global $base_url;
+  //print_r($base_url);die;
+$var['background_image'] = ' ';
+//  print_r($vars['node']->get('field_article_image')->getValue()['target_id']);die;
+  //if(isset($vars['node']))
+  if(isset($vars['node'])) {
+    $type = $vars['node']->get('type')->getValue();
+  //  kint($type[0]['target_id']);die;
+    if($type[0]['target_id'] == 'page' || $type[0]['target_id'] == 'contact_us'){
+      if(isset($vars['node']->field_image)){
+        $image = $vars['node']->get('field_image')->getValue();
+        $fid = $image[0]['target_id'];
+        if ($fid){
+          $file = \Drupal\file\Entity\File::load($fid)->getFileUri();
+          $vars['background_image'] = file_create_url($file);
+        }
+      }
+      else{
+        $var['background_image'] = $base_url.'/themes/custom/blog/img/home-bg.jpg';
+      }
+
+    }
+    if (isset($vars['node']) && $type[0]['target_id'] == 'article') {
+      if (isset($vars['node']->field_article_image)) {
+        $image = $vars['node']->get('field_article_image')->getValue();
+        $fid = $image[0]['target_id'];
+        if ($fid){
+          $file = \Drupal\file\Entity\File::load($fid)->getFileUri();
+          $vars['background_image'] = file_create_url($file);
+        }
+      }
+      else{
+        $var['background_image'] = $base_url.'/themes/custom/blog/img/home-bg.jpg';
+      }
+
+  }
+
+
+}
+
+
+}

@@ -1,0 +1,31 @@
+uuid: e27845b1-206a-4155-bbef-e6808cabe952
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.token
+    - field.field.node.page.body
+    - field.field.node.page.field_image
+    - field.field.node.page.field_subtitle
+    - node.type.page
+  module:
+    - text
+    - user
+_core:
+  default_config_hash: g1S3_GLaxq4l3I9RIca5Mlz02MxI2KmOquZpHw59akM
+id: node.page.token
+targetEntityType: node
+bundle: page
+mode: token
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_image: true
+  field_subtitle: true
+  links: true
