@@ -1,0 +1,8 @@
+uuid: a1502329-a6b2-4147-bf9b-017f6c4c8856
+langcode: en
+status: true
+dependencies: {  }
+id: demo
+label: demo
+target_entity_type_id: comment
+description: ''

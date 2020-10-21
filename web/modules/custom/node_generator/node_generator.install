@@ -1,0 +1,37 @@
+<?php
+
+function node_generator_schema(){
+    $schema['feedback'] = [
+        'description' => 'this table is to store users feedback.',
+        'fields' => [
+            'id' => [
+                'description' => 'The primary identifier for user.',
+                'type' => 'serial',
+                'not null' => TRUE,
+                'unsigned' => TRUE,
+            ],
+            'uid' => [
+              'type' => 'int',
+               'not null' => TRUE,
+               'default' => 0,
+               'description' => 'User ID'
+            ],
+            'name' => [
+                'description' => 'Name',
+                'type' => 'varchar',
+                'length' => 255,
+                'not null' => TRUE,
+            ],
+
+            'feedback' => [
+                'description' => 'Feedback',
+                'type' => 'varchar',
+                'length' => 255,
+                'not null' => TRUE,
+            ],
+
+        ],
+        'primary key' => ['id'],
+    ];
+    return $schema;
+}

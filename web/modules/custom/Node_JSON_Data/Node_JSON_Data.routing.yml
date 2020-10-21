@@ -1,0 +1,21 @@
+Node_JSON_Data_data:
+  path: 'data/{apikey}/{node_id}'
+  defaults:
+    _controller: '\Drupal\Node_JSON_Data\Controller\GetDataController::GetData'
+  requirements:
+    _permission: 'access content'
+
+Node_JSON_Data_form:
+  path: '/apiform'
+  defaults:
+    _form: '\Drupal\Node_JSON_Data\Form\ApikeyConfig'
+    _title: 'API KEY'
+  requirements:
+    _permission: 'access content'
+
+Node_JSON_Data_content:
+  path: 'data/{apikey}/{content_type}/{node_id}'
+  defaults:
+    _controller: '\Drupal\Node_JSON_Data\Controller\GetController::Get'
+  requirements:
+    _permission: 'access content'
