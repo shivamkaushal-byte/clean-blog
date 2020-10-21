@@ -1,0 +1,4 @@
+name: node_generator
+description: this module is to generate nodes
+type: module
+core: 8.x

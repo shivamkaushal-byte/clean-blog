@@ -1,0 +1,20 @@
+uuid: 5bde289a-15d3-4e4e-bffb-3ef7be4bb902
+langcode: en
+status: true
+dependencies:
+  module:
+    - node_generator
+  theme:
+    - blog
+id: feedbackform
+theme: blog
+region: sidebar_first
+weight: 0
+provider: null
+plugin: feedback_block
+settings:
+  id: feedback_block
+  label: 'Feedback Form'
+  provider: node_generator
+  label_display: visible
+visibility: {  }

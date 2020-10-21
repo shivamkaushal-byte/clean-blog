@@ -1,4 +1,5 @@
 module:
+  Node_JSON_Data: 0
   admin_toolbar: 0
   admin_toolbar_tools: 0
   automated_cron: 0
@@ -31,6 +32,7 @@ module:
   menu_link_content: 0
   menu_ui: 0
   node: 0
+  node_generator: 0
   options: 0
   page_cache: 0
   path: 0

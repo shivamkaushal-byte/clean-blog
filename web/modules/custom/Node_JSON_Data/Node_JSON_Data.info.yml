@@ -1,0 +1,4 @@
+name: node_json_data
+description: this module is to create nodes
+type: module
+core: 8.x

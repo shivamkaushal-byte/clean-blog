@@ -1,0 +1,27 @@
+<?php
+
+/**
+ * @file
+ * This is my module.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Symfony\Component\HttpFoundation\Request;
+
+/**
+ * Implements hook_form_alter().
+ */
+function Node_JSON_Data_form_alter(array &$form, FormStateInterface $form_state, $form_id){
+   $configData = \Drupal::service('config.factory')->getEditable('Node_JSON_Data.settings');
+   $apikey = $configData->get('api_key');
+   if($form_id == 'system_site_information_settings'){
+     $form['site_information']['api_key'] = [
+       '#type' => 'textfield',
+       '#title' => 'enter the api key ',
+       '#default_value' => $apikey,
+     ];
+   }
+ //kint($apikey);die
+  //
+   //system_site_information_setting
+}
